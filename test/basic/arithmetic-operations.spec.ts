@@ -2,7 +2,7 @@ import { expect } from "chai";
 import ArithmeticOperations from "../../src/basic/arithmetic-operations";
 
 
-describe( 'Operaciones Aritméticas', () => {
+describe( 'BASIC - Operaciones Aritméticas', () => {
     const artOp = new ArithmeticOperations();
 
     it( 'Debería sumar dos números correctamente', () => {

@@ -2,7 +2,7 @@ import { expect } from "chai";
 import { validateEmail } from "../../src/basic/validate-email";
 
 
-describe( 'Validación de Email', () => {
+describe( 'BASIC - Validación de Email', () => {
     it( 'Debería retornar true para un email válido', () => {
         expect( validateEmail( 'test@example.com' ) ).to.be.true;
     } );

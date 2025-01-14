@@ -2,7 +2,7 @@ import { expect } from "chai";
 import { greet, identity, parseValue, sum } from "../../src/intermediate/validate-types";
 
 
-describe( 'Validar Tipos de parámetros y retornos', () => {
+describe( 'INTERMEDIATE - Validar Tipos de parámetros y retornos', () => {
     // Validar tipo de retorno
     it( 'sum - Debería retornar un número', () => {
         expect( sum( 2, 3 ) ).to.be.a( 'number' );
