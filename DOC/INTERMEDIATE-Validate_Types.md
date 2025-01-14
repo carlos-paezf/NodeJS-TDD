@@ -68,9 +68,11 @@ Las pruebas se han escrito con Mocha y Chai para validar el comportamiento de ca
 1. `sum`
 
    ```ts
-   it('sum - Debería retornar un número', () => {
-       expect(sum(2, 3)).to.be.a('number');
-   });
+   describe( 'sum - Validar tipo de retorno', () => {
+      it( 'Debería retornar un número', () => {
+         expect( sum( 2, 3 ) ).to.be.a( 'number' );
+      } );
+   } );
    ```
 
    - *Prueba*: Comprueba que la función retorna un valor de tipo number al sumar dos números.
@@ -78,13 +80,15 @@ Las pruebas se han escrito con Mocha y Chai para validar el comportamiento de ca
 2. `greet`
 
    ```ts
-   it('greet - Debería retornar un string', () => {
-       expect(greet('David')).to.be.a('string');
-   });
+   describe( 'greet - Validar que se lanza un error si los tipos de parámetros son incorrectos', () => {
+      it( 'Debería retornar un string', () => {
+         expect( greet( 'David' ) ).to.be.a( 'string' );
+      } );
 
-   it('greet - Debería lanzar un error si el nombre no es un string', () => {
-       expect(() => greet(123 as any)).to.throw(Error);
-   });
+      it( 'Debería lanzar un error si el nombre no es un string', () => {
+         expect( () => greet( 123 as any ) ).to.throw( Error );
+      } );
+   } );
    ```
 
    - *Prueba 1*: Verifica que la función retorna un string cuando se pasa un nombre válido.
@@ -93,21 +97,23 @@ Las pruebas se han escrito con Mocha y Chai para validar el comportamiento de ca
 3. `parseValue`
 
    ```ts
-   it('parseValue - Debería aceptar números correctamente', () => {
-       const result = parseValue(22);
-       expect(result).to.be.a('string');
-       expect(result).to.equal('22.00');
-   });
+   describe( 'parseValue - Validar múltiples tipos de parámetros con sobrecarga', () => {
+      it( 'Debería aceptar números correctamente', () => {
+         const result = parseValue( 22 );
+         expect( result ).to.be.a( 'string' );
+         expect( result ).to.equal( '22.00' );
+      } );
 
-   it('parseValue - Debería aceptar strings correctamente', () => {
-       const result = parseValue('Hola');
-       expect(result).to.be.a('string');
-       expect(result).to.equal('HOLA');
-   });
+      it( 'Debería aceptar strings correctamente', () => {
+         const result = parseValue( 'Hola' );
+         expect( result ).to.be.a( 'string' );
+         expect( result ).to.equal( 'HOLA' );
+      } );
 
-   it('parseValue - Debería lanzar un error para types no soportados', () => {
-       expect(() => parseValue(true as any)).to.throw(Error);
-   });
+      it( 'Debería lanzar un error para types no soportados', () => {
+         expect( () => parseValue( true as any ) ).to.throw( Error );
+      } );
+   } );
    ```
 
    - *Prueba 1*: Valida que los números se formatean correctamente con dos decimales.
@@ -117,22 +123,24 @@ Las pruebas se han escrito con Mocha y Chai para validar el comportamiento de ca
 4. `identity`
 
    ```ts
-   it('identity - Debería retornar el mismo valor para un número', () => {
-       const result = identity(42);
-       expect(result).to.be.a('number');
-       expect(result).to.equal(42);
-   });
+   describe( 'identity - Validar tipos genéricos', () => {
+      it( 'Debería retornar el mismo valor para un número', () => {
+         const result = identity( 42 );
+         expect( result ).to.be.a( 'number' );
+         expect( result ).to.equal( 42 );
+      } );
 
-   it('identity - Debería retornar el mismo valor para un string', () => {
-       const result = identity('Hola');
-       expect(result).to.be.a('string');
-       expect(result).to.equal('Hola');
-   });
+      it( 'Debería retornar el mismo valor para un string', () => {
+         const result = identity( 'Hola' );
+         expect( result ).to.be.a( 'string' );
+         expect( result ).to.equal( 'Hola' );
+      } );
 
-   it('identity - NO Debería retornar un string si se le pasa un número', () => {
-       const result = identity(42);
-       expect(result).not.to.be.a('string');
-   });
+      it( 'NO Debería retornar un string si se le pasa un número', () => {
+         const result = identity( 42 );
+         expect( result ).not.to.be.a( 'string' );
+      } );
+   } );
    ```
 
    - *Prueba 1 y 2*: Verifican que la función retorna el mismo valor para diferentes tipos de entrada.
