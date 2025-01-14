@@ -103,4 +103,5 @@ pnpm test
    - [Operaciones Aritméticas](./DOC/BASIC-Arithmetic_Operations.md)
    - [Validación de Email](./DOC/BASIC-Validate_Email.md)
 2. Intermedio
+   - [Validación de Types](./DOC/INTERMEDIATE-Validate_Types.md)
 3. Avanzado
