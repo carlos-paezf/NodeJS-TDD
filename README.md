@@ -27,7 +27,7 @@ En el archivo `tsconfig.json` generado del paso anterior, cambiamos el valor de 
 ```json
 {
     "compilerOptions": {
-        "rootDir": "./src", /* Specify the root folder within your source files. */
+        "rootDir": ".", /* Specify the root folder within your source files. */
         ...
         "outDir": "./dist", /* Specify an output folder for all emitted files. */
         ...
@@ -39,18 +39,6 @@ Es necesario realizar la instalación de la siguiente dependencia (puede ser glo
 
 ```bash
 pnpm i ts-node
-```
-
-El siguiente paso es crear un script de ejecución nuevo dentro de `package.json`, con la intención de personalizar el comando que nos servirá para ejecutar el proyecto en modo de prueba:
-
-```json
-{
-    ...
-    "scripts": {
-        "dev": "ts-node src/index.ts",
-    },
-    ...
-}
 ```
 
 Adicional, creamos el comando que se encarga de transpilar el código de TS a JS:
@@ -74,7 +62,7 @@ pnpm i -S express jsonwebtoken mongoose bull
 ```
 
 ```bash
-pnpm i -D ts-mocha chai supertest
+pnpm i -D ts-mocha mocha chai@4.5.0 supertest
 ```
 
 También se puede añadir un paquete para generar un informe de cobertura de código:
@@ -91,13 +79,13 @@ pnpm i -D @types/express @types/jsonwebtoken @types/mocha @types/chai @types/sup
 
 ## Configuración para ejecutar las pruebas
 
-En este paso vamos a indicarle al nuevo comando que queremos realizar las pruebas de la carpeta `test` con ts-mocha de manera recursiva, paralela y con un reporte de spec:
+En este paso vamos a indicarle al nuevo comando que queremos realizar las pruebas de la carpeta `test` con ts-mocha de manera recursiva, paralela y con un reporte de cobertura de los test:
 
 ```json
 {
     ...
     "scripts": {
-        "test": "nyc ts-mocha --recursive --parallel --reporter spec test",
+        "test": "nyc ts-mocha --recursive --parallel test/**/*.spec.ts",
     },
     ...
 }
