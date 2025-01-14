@@ -104,4 +104,5 @@ pnpm test
    - [Validación de Email](./DOC/BASIC-Validate_Email.md)
 2. Intermedio
    - [Validación de Types](./DOC/INTERMEDIATE-Validate_Types.md)
+   - [API REST para Gestión de Tareas](./DOC/INTERMEDIATE-API_REST_Task_Management.md)
 3. Avanzado
