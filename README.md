@@ -96,3 +96,10 @@ Con lo anterior vamos a poder ejecutar el siguiente comando, observar los result
 ```bash
 pnpm test
 ```
+
+## Empezamos con los ejemplos
+
+1. Básico
+   - [Operaciones Aritméticas](./DOC/BASIC-Arithmetic_Operations.md)
+2. Intermedio
+3. Avanzado
