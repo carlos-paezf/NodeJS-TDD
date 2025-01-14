@@ -105,4 +105,5 @@ pnpm test
 2. Intermedio
    - [Validación de Types](./DOC/INTERMEDIATE-Validate_Types.md)
    - [API REST para Gestión de Tareas](./DOC/INTERMEDIATE-API_REST_Task_Management.md)
+   - [Autenticación con JWT](./DOC/INTERMEDIATE-Auth_with_JWT.md)
 3. Avanzado
