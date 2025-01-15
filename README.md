@@ -108,3 +108,4 @@ pnpm test
    - [Autenticación con JWT](./DOC/INTERMEDIATE-Auth_with_JWT.md)
    - [Sistema de Roles y Permisos](./DOC/INTERMEDIATE-Role_and_Permission_System.md)
 3. Avanzado
+   - [API RESTful con MongoDB](./DOC/ADVANCED-API_RESTful_with_MongoDB.md)
