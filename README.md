@@ -109,3 +109,4 @@ pnpm test
    - [Sistema de Roles y Permisos](./DOC/INTERMEDIATE-Role_and_Permission_System.md)
 3. Avanzado
    - [API RESTful con MongoDB](./DOC/ADVANCED-API_RESTful_with_MongoDB.md)
+   - [API RESTful con Paginación y Filtros](./DOC/ADVANCED-API_RESTful_with_Pagination_and_Filters.md)
