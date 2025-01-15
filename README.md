@@ -110,3 +110,4 @@ pnpm test
 3. Avanzado
    - [API RESTful con MongoDB](./DOC/ADVANCED-API_RESTful_with_MongoDB.md)
    - [API RESTful con Paginación y Filtros](./DOC/ADVANCED-API_RESTful_with_Pagination_and_Filters.md)
+   - [Procesamiento Asíncrono con Redis](./DOC/ADVANCED-Asynchronous_Processing_with_Redis.md)
